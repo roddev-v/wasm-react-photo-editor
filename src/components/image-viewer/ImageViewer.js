@@ -14,26 +14,37 @@ function ImageViewer() {
 
   useEffect(() => {
     if (imageSrc) {
-      const imageEl = document.getElementById('imageHolder');
+      const img = new Image();
+      img.src = imageSrc;
       dispatch(showLoadingSpinner());
-      imageEl.onload = () => {
-        const {width, height} = imageEl.getBoundingClientRect();
-        const canvas = document.createElement('canvas');
-        const context = canvas.getContext('2d');
-        canvas.width = width;
-        canvas.height = height;
-        context.drawImage(imageEl, 0, 0, width, height);
-        const imageData = context.getImageData(0, 0, width, height);
-        const data = Array.from(imageData.data);
+      img.onload = () => {
+        const data = getImageData(img);
         dispatch(storeImageBytes(data));
         dispatch(hideLoadingSpinner());
       }
     }
-  }, [imageSrc]);
+  }, [imageSrc, dispatch]);
+
+  const getImageData = (image) => {
+    const canvas = document.getElementById('canvasHolder');
+    const context = canvas.getContext('2d');
+    const width = canvas.width;
+    const height = canvas.height;
+    context.drawImage(image, 0, 0, width, height);
+    const imageData = context.getImageData(0, 0, width, height);
+    return Array.from(imageData.data);
+  }
+
+  const getImageView = () => {
+    if (imageSrc) {
+      return <canvas id="canvasHolder"/>;
+    }
+    return <p>No Image available</p>
+  }
 
   return (
-    <div>
-      <img id="imageHolder" alt="" className="image-viewer-container" src={imageSrc}/>
+    <div className="image-viewer-container">
+      {getImageView()}
     </div>
   );
 }
