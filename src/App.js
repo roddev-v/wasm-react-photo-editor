@@ -5,7 +5,7 @@ import ImageViewer from "./components/image-viewer/ImageViewer";
 import {useDispatch, useSelector} from "react-redux";
 import {selectIsLoading} from "./features/core/coreSlice";
 import LoadingSpinner from "./components/loading-spinner/LoadingSpinner";
-import {loadWasmExample} from "./features/counter/counterSlice";
+import {loadWasmExample} from "./features/counter/exampleSlice";
 
 function App() {
   const dispatch = useDispatch();

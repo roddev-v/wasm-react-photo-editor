@@ -10,14 +10,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="acc45ef2-aa30-48d6-b5ee-aa3bf1038e45" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../public/wasm/example.wasm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/wasm-source.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src/features/core/wasmSlice.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/features/counter/counterSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/../src/features/counter/counterSlice.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/app/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/../src/app/store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/features/counter/Counter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/features/counter/Counter.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/features/counter/counterAPI.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/features/counter/counterSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/../src/features/counter/exampleSlice.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example.c" beforeDir="false" afterPath="$PROJECT_DIR$/example.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,9 +55,9 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
   </component>
@@ -69,7 +70,8 @@
       <option name="presentableId" value="Default" />
       <updated>1636743984704</updated>
       <workItem from="1636743986535" duration="565000" />
-      <workItem from="1636745681803" duration="5037000" />
+      <workItem from="1636745681803" duration="5186000" />
+      <workItem from="1636757158737" duration="131000" />
     </task>
     <servers />
   </component>
