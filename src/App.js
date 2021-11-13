@@ -4,8 +4,9 @@ import ActionBar from "./components/actions-bar/ActionBar";
 import ImageViewer from "./components/image-viewer/ImageViewer";
 import {useDispatch, useSelector} from "react-redux";
 import {selectIsLoading} from "./features/core/coreSlice";
+import {loadWasmExample} from "./features/core/wasmSlice";
 import LoadingSpinner from "./components/loading-spinner/LoadingSpinner";
-import {loadWasmExample} from "./features/counter/exampleSlice";
+import Demo from "./components/demo/Demo";
 
 function App() {
   const dispatch = useDispatch();
@@ -20,6 +21,8 @@ function App() {
       {isLoading && <LoadingSpinner/>}
       <ActionBar/>
       <ImageViewer/>
+
+      <Demo/>
     </div>
   );
 }
