@@ -7,6 +7,7 @@ import {selectIsLoading} from "./features/core/coreSlice";
 import {loadWasmExample} from "./features/core/wasmSlice";
 import LoadingSpinner from "./components/loading-spinner/LoadingSpinner";
 import Demo from "./components/demo/Demo";
+import DemoPixels from "./components/demo/DemoPixels";
 
 function App() {
   const dispatch = useDispatch();
@@ -23,6 +24,7 @@ function App() {
       <ImageViewer/>
 
       <Demo/>
+      <DemoPixels/>
     </div>
   );
 }
