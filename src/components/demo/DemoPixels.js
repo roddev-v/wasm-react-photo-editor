@@ -1,6 +1,6 @@
 import {useState} from "react";
 import {ExampleWrapper} from "../../wasm-wrappers/example-wrapper";
-import PixelView from "../pixels/pixel-view/PixelView";
+import PixelView from "../../pages/basic-pixel-manipulation/components/pixel-view/PixelView";
 
 function DemoPixels() {
   const defaultPixels = [
