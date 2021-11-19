@@ -1,5 +1,6 @@
 import {useState} from "react";
 import {ExampleWrapper} from "../../wasm-wrappers/example-wrapper";
+import PixelView from "../pixels/pixel-view/PixelView";
 
 function DemoPixels() {
   const defaultPixels = [
@@ -15,22 +16,6 @@ function DemoPixels() {
   ];
   const [pixels, updatePixels] = useState(defaultPixels);
 
-  const getPixel = (color, index) => {
-    return <div key={index} style={{backgroundColor: color, height: '30px', width: '30px'}}/>
-  };
-
-  const generatePixels = (pixelsInput) => {
-    const pixels = [];
-    for (let i = 0; i <= pixelsInput.length - 3; i += 3) {
-      const r = pixelsInput[i];
-      const g = pixelsInput[i + 1];
-      const b = pixelsInput[i + 2];
-      const color = `rgb(${r}, ${g}, ${b})`;
-      pixels.push(color);
-    }
-    return pixels;
-  }
-
   const applyTh = (e) => {
     const value = +e.target.value;
     const newPixelSet = ExampleWrapper.applyTh(defaultPixels, value);
@@ -41,13 +26,9 @@ function DemoPixels() {
     <div>
       <input type="range" id="volume" name="volume"
              min="0" max="255" onChange={(e) => applyTh(e)}/>
-      <div style={{display: 'flex'}}>
-        {generatePixels(defaultPixels).map((color, index) => getPixel(color, index))}
-      </div>
+      <PixelView pixels={defaultPixels}/>
       <br/>
-      <div style={{display: 'flex'}}>
-        {generatePixels(pixels).map((color, index) => getPixel(color, index))}
-      </div>
+      <PixelView pixels={pixels}/>
     </div>
   )
 }
